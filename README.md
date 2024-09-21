@@ -1,7 +1,7 @@
 
 # Hi there 🐱‍🐉 I'm ...
 
-![[ascii.gif]]
+![ascii art](ascii.gif)
 
 ## about me
 
