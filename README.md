@@ -4,7 +4,21 @@
 
 ## about me
 
-> Under construction
+<!-- [Short CV here](https://drive.google.com/file/d/1uLDzea3lqNvleykk8VX-VC3cBDDupUKY/view)
+
+I started learning to code at my school when was 16. I was introduced to Turbo Pascal at computer science class. It amazed me how you can tell computer simple instructions and it will execute it. I've immideatly applied this knoweledge and wrote a programm that finds roots of the discriminant and flashed through my math homework. I wanted more so I took home textbook and finished every given exercise over next 3 weeks 
+
+...
+
+University
+
+Gamedev and gamejam
+
+Why gamedev sucked for me
+
+How I found Tomoru
+
+My plans -->
 
 ## technologies
 
@@ -82,6 +96,7 @@ flowchart TD
         paper_plane_3 --> paper_plane_4{{"Шейдеры для подсвечивания зон интереса"}}:::child
         paper_plane_4 --> paper_plane_5{{"Искусственный Интеллект с системами патрулирования и боя по ролям"}}:::child
         paper_plane_5 --> paper_plane_6{{"Создание систем сохранений, диалогов, инвентаря, состояний"}}:::child
+        paper_plane_6 --> paper_plane_7{{"Reverse Engioneering Unity билда чтобы достать себе аватарку для телеграмма"}}:::child
     end
 
     main --> tomoru
