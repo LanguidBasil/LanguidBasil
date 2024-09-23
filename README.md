@@ -88,7 +88,7 @@ flowchart TD
     subgraph tomoru_graph
         style tomoru_graph fill:#F5D7E3, stroke:#D2D0BA, color:#ffffff, font-size:8pt
         
-        tomoru --> tomoru_graph_2023_04_1("tomoru ~ / 2023-04"):::parent
+        tomoru --> tomoru_graph_2023_04_1("tomoru 2022-06 / 2023-04"):::parent
         tomoru --> tomoru_graph_2023_05_1("tomoru 2023-04 / 2023-05"):::parent
         tomoru --> tomoru_graph_2023_06_1("tomoru 2023-05 / 2023-06"):::parent
         tomoru --> tomoru_graph_2023_07_1("tomoru 2023-06 / 2023-07"):::parent
@@ -99,6 +99,7 @@ flowchart TD
             style tomoru_graph_2023_04 fill:#F5D7E3, stroke:#D2D0BA, color:#ffffff, font-size:8pt
 
             tomoru_graph_2023_04_1 --> tomoru_graph_2023_04_2{{"Получение данных по API из сторонних сервисов, их обработка и запись в PostgreSQL, Google Spreadsheets и BigQuery"}}:::child
+            tomoru_graph_2023_04_1 --> tomoru_graph_2023_04_2{{"Ускорение загрузки 5 гигабайт данных из AmoCRM API в 4 раза распределив ее на 4 celery worker'а"}}:::child
             tomoru_graph_2023_04_2 --> tomoru_graph_2023_04_3{{"Макрос для создания бекапов Google Spreadsheets"}}:::child
             tomoru_graph_2023_04_3 --> tomoru_graph_2023_04_4{{"Форма для добавления и обновления данных на платформе компании"}}:::child
             tomoru_graph_2023_04_4 --> tomoru_graph_2023_04_5{{"Чистка данных и улучшение их надежности"}}:::child
@@ -301,15 +302,20 @@ flowchart TD
 
             softorium_graph_2024_07_1 --> softorium_graph_2024_07_2{{"Динамическая загрузка `APIRouter` объектов из модулей в пакете `routers` и включение их в `FastAPI` объект"}}:::child
             softorium_graph_2024_07_2 --> softorium_graph_2024_07_3{{"Синхронизация collation базы данных между dev и prod стендами чтобы операции фильтрации и поиска давали консистентные результаты"}}:::child
-            softorium_graph_2024_07_3 --> softorium_graph_2024_07_4{{"Изолирование тестов друг от друга, тестирование upgrade и downgrade миграций, предотвращение появления сайд эффектов после выполнения теста"}}:::child
-            softorium_graph_2024_07_4 --> softorium_graph_2024_07_5{{"Создание скрипта и ci/cd задачи по увеличению версии при принятии мерж реквеста в development или master ветку"}}:::child
-            softorium_graph_2024_07_5 --> softorium_graph_2024_07_6{{"git checkout в прошлые коммиты для определения после каких изменений появился баг"}}:::child
+            softorium_graph_2024_07_3 --> softorium_graph_2024_07_4{{"Rebuild инвалидированных индексов при изменении collation"}}:::child
+            softorium_graph_2024_07_4 --> softorium_graph_2024_07_5{{"Изолирование тестов друг от друга, тестирование upgrade и downgrade миграций, предотвращение появления сайд эффектов после выполнения теста"}}:::child
+            softorium_graph_2024_07_5 --> softorium_graph_2024_07_6{{"Создание скрипта и ci/cd задачи по увеличению версии при принятии мерж реквеста в development или master ветку"}}:::child
+            softorium_graph_2024_07_6 --> softorium_graph_2024_07_7{{"git checkout в прошлые коммиты для определения после каких изменений появился баг"}}:::child
+            softorium_graph_2024_07_7 --> softorium_graph_2024_07_8{{"Объединил все операции с базой данных в рамках одного API ендпоинта в транзакцию чтобы обеспечить атомарность операции"}}:::child
+            softorium_graph_2024_07_8 --> softorium_graph_2024_07_9{{"Использование Explain Analyze для ускорения SQL запросов. Построение индексов на часто используемые столбцы. Удаление лишних join условий. Замена Inline выражений на константные"}}:::child
         end
 
         subgraph softorium_graph_2024_08
             style softorium_graph_2024_08 fill:#F5D7E3, stroke:#D2D0BA, color:#ffffff, font-size:8pt
 
             softorium_graph_2024_08_1 --> softorium_graph_2024_08_2{{"Создание cron задачи для автоматического бекапа базы данных (pd_dump + pg_restore)"}}:::child
+            softorium_graph_2024_08_2 --> softorium_graph_2024_08_3{{"Откат изменений с помощью git reset и сохранение изменений в stash"}}:::child
+            softorium_graph_2024_08_3 --> softorium_graph_2024_08_4{{"Сохранение git stash'а в отдельный файл, перенос на флешку и применение на другом пк"}}:::child
         end
 
         subgraph softorium_graph_2024_09
