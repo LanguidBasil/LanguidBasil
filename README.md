@@ -4,9 +4,11 @@
 
 ## about me
 
-<!-- [Short CV here](https://drive.google.com/file/d/1uLDzea3lqNvleykk8VX-VC3cBDDupUKY/view)
+[Short CV here](https://drive.google.com/file/d/1uLDzea3lqNvleykk8VX-VC3cBDDupUKY/view)
 
-I started learning to code at my school when was 16. I was introduced to Turbo Pascal at computer science class. It amazed me how you can tell computer simple instructions and it will execute it. I've immideatly applied this knoweledge and wrote a programm that finds roots of the discriminant and flashed through my math homework. I wanted more so I took home textbook and finished every given exercise over next 3 weeks 
+TODO: write my story
+
+<!--  I started learning to code at my school when was 16. I was introduced to Turbo Pascal at computer science class. It amazed me how you can tell computer simple instructions and it will execute it. I've immideatly applied this knoweledge and wrote a programm that finds roots of the discriminant and flashed through my math homework. I wanted more so I took home textbook and finished every given exercise over next 3 weeks 
 
 ...
 
@@ -32,6 +34,8 @@ My plans -->
 
 ## contacts
 
+<!-- TODO: maybe change to badges? Example: https://github.com/fastapi/fastapi -->
+
 <img width="16px" src="./assets/telegram.svg" alt="telegram logo" /> [telegram](https://t.me/emakunev)
 
 <img width="16px" src="./assets/linkedin.svg" alt="linkedin logo" /> [LinkedIn](https://www.linkedin.com/in/eugene-makunev-b9682b233/)
@@ -39,6 +43,8 @@ My plans -->
 <img width="16px" src="./assets/mail.svg" alt="mail logo" /> [Mail](mailto:e.makunev@gmail.com)
 
 ## achivements
+
+<!-- TODO: translate  -->
 
 ```mermaid
 flowchart TD
