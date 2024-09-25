@@ -8,13 +8,19 @@
 
 TODO: write my story
 
-<!--  I started learning to code at my school when was 16. I was introduced to Turbo Pascal at computer science class. It amazed me how you can tell computer simple instructions and it will execute it. I've immideatly applied this knoweledge and wrote a programm that finds roots of the discriminant and flashed through my math homework. I wanted more so I took home textbook and finished every given exercise over next 3 weeks 
+<!-- I started learning to code at my school when was 16. I was introduced to Turbo Pascal at computer science class. It amazed me how you can tell computer simple instructions and it will execute it. I've immideatly applied this knoweledge and wrote a programm that finds roots of the discriminant and flashed through my math homework. I wanted more so I took home textbook and finished every given exercise over next 3 weeks.
+
+After this experience I knew what career path I will take. I've started preparing for final exams at school and was aiming for computer science programs. Daily nerding out questions and solving tests from past years I managed to score 252 out of 300 points and got myself into university I dreamed about - Far Eastern Federal University in Vladivostok.
+
+![fefu](./assets/fefu.jpg)
+
+I enrolled for 'Applied Computer Science in Business'. I loved campus, nothing compared with view of the sea from my cozy dorm. Classmates were awesome, many played guitar, organized events and of course all of them were geeks. Program was much fun too. Math classes combined with economics and sprinlked with OOP and Algorithms on top is a cake for a great career.
+
+Quite a sudden realization came when I was sitting in the evening with my homework - "This theory is good and all, but I want something more practical". I tried making simple websites and programs, but nothing felt interesting enough. Until I came upon a post in my news feed about an upcoming game jam. That's it I thought, a chance to do something great. I've signed up for a gamejam, found a team and we've made 🐱‍🐉🔧 Dinofication ⚡🏠. Cute little game about a Dino who was fixing home electronics while tenants were gone
+
+https://gr3yknigh1.itch.io/dinofication
 
 ...
-
-University
-
-Gamedev and gamejam
 
 Why gamedev sucked for me
 
@@ -343,8 +349,9 @@ flowchart TD
             style softorium_graph_2024_09 fill:#F5D7E3, stroke:#D2D0BA, color:#ffffff, font-size:8pt
 
             softorium_graph_2024_09_1 --> softorium_graph_2024_09_2{{"Код ревью и оценка грейда кандидатов на вакансии"}}:::child
-            softorium_graph_2024_09_2 --> softorium_graph_2024_09_3{{"Ускорение запроса с фильтрацией по uuid в 112 раз путем изменения индекса базы данных с btree на hash"}}:::child
+            softorium_graph_2024_09_2 --> softorium_graph_2024_09_3{{"Ускорение запроса с фильтрацией по uuid на 20% путем изменения индекса базы данных с btree на hash"}}:::child
             softorium_graph_2024_09_3 --> softorium_graph_2024_09_4{{"Создание plotly отчетов - pie chart'ы, гистограммы, динамика выручки, доля полки по поставщикам"}}:::child
+            softorium_graph_2024_09_4 --> softorium_graph_2024_09_5{{"Скрыл данные клиентов компании для создания шоу кейса сервиса"}}:::child
         end
     end
 ```
