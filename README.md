@@ -200,6 +200,7 @@ flowchart TD
         softorium --> softorium_graph_2024_07_1("softorium 2024-07 / 2024-08"):::parent
         softorium --> softorium_graph_2024_08_1("softorium 2024-08 / 2024-09"):::parent
         softorium --> softorium_graph_2024_09_1("softorium 2024-09 / 2024-10"):::parent
+        softorium --> softorium_graph_2024_10_1("softorium 2024-10 / 2024-11"):::parent
 
         subgraph softorium_graph_2023_10
             style softorium_graph_2023_10 fill:#F5D7E3, stroke:#D2D0BA, color:#ffffff, font-size:8pt
@@ -350,6 +351,16 @@ flowchart TD
             softorium_graph_2024_09_2 --> softorium_graph_2024_09_3{{"Speed ​​up query with filtering by uuid by 20% by changing database index from btree to hash"}}:::child
             softorium_graph_2024_09_3 --> softorium_graph_2024_09_4{{"Creating plotly reports - pie charts, histograms, revenue dynamics, shelf share by suppliers"}}:::child
             softorium_graph_2024_09_4 --> softorium_graph_2024_09_5{{"Concealed the company's client data to create a service show case"}}:::child
+        end
+        
+
+        subgraph softorium_graph_2024_10
+            style softorium_graph_2024_10 fill:#F5D7E3, stroke:#D2D0BA, color:#ffffff, font-size:8pt
+
+            softorium_graph_2024_10_1 --> softorium_graph_2024_10_2{{"Change of dash.DataTable pagination from clientside to serverside, and loading 100 rows instead of 400 000"}}:::child
+            softorium_graph_2024_10_2 --> softorium_graph_2024_10_3{{"Using `nth last child` css property to hide last row with summary"}}:::child
+            softorium_graph_2024_10_3 --> softorium_graph_2024_10_4{{"ABC analytical report"}}:::child
+            softorium_graph_2024_10_4 --> softorium_graph_2024_10_5{{"Translation of 20 000 unique texts with Google Translate API"}}:::child
         end
     end
 ```
