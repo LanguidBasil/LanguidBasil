@@ -62,6 +62,7 @@ flowchart TD
     university_naruto(naruto):::parent
     paper_plane(paper_plane):::parent
     tomoru(tomoru):::parent
+    feip(feip):::parent
     softorium(softorium):::parent
 
 
@@ -69,7 +70,7 @@ flowchart TD
     subgraph university_graph
         style university_graph fill:#F5D7E3, stroke:#D2D0BA, color:#ffffff, font-size:8pt
 
-        university --> university_1{{"Ant algorithm in Pascal"}}:::child
+        university --> university_1{{"Ant Colony Algorithm in Pascal"}}:::child
         university_1 --> university_2{{"Snake game in self-written assembler. Logisim"}}:::child
         university_2 --> university_3{{"Modeling a system for processing details and improving resource utilization by optimizing various factors: table capacity, processing speed, number of workers, etc. C# + WinForms"}}:::child
         university_3 --> university_4{{"Implementation of different sorting algorithms and their comparison. C# + WinForms"}}:::child
@@ -107,6 +108,19 @@ flowchart TD
         paper_plane_4 --> paper_plane_5{{"Artificial Intelligence with patrol and role-based combat systems"}}:::child
         paper_plane_5 --> paper_plane_6{{"Creating systems of saving, dialogues, inventory, states"}}:::child
         paper_plane_6 --> paper_plane_7{{"Reverse Engioneering Unity build to get myself an avatar for telegram"}}:::child
+    end
+
+    main --> feip
+    subgraph feip_grap
+        style feip_grap fill:#F5D7E3, stroke:#D2D0BA, color:#ffffff, font-size:8pt
+
+        feip --> feip_1{{"Telegram bot for employee management - adding employees, setting their's permissions in companies systems, firing employees"}}:::child
+        feip_1 --> feip_2{{"Wrote a script to save rtsp stream into 1h video files"}}:::child
+        feip_2 --> feip_3{{"linux. Process management (getting PID, reading stdout and sterr from source). Output redirection (piping)"}}:::child
+        feip_3 --> feip_4{{"Registering the program as a `systemd` service for autostart at system startup and creating a `bash install` script for automatic configuration"}}:::child
+        feip_4 --> feip_5{{"Creating a docker image of a program to simplify its launch (+ support for auto-restarting the program when changing configs)"}}:::child
+        feip_5 --> feip_6{{"Automated creation of product pages in CMS speeding process up to 90%"}}:::child
+        feip_6 --> feip_7{{"Landing pages made in Tilda"}}:::child
     end
 
     main --> tomoru
@@ -247,13 +261,11 @@ flowchart TD
             softorium_graph_2024_01_2 --> softorium_graph_2024_01_3{{"Synchronization of application and infrastructure structure requirements between `docker-compose-local` and `docker-compose-dev` files - startup commands and required folders were different. A situation arose when a folder required for the dev version was deleted, but locally this did not cause an error, which is why merging those changes led to a crash of the dev version"}}:::child
             softorium_graph_2024_01_3 --> softorium_graph_2024_01_4{{"Configuration of IP access to postgresql database"}}:::child
             softorium_graph_2024_01_4 --> softorium_graph_2024_01_5{{"Specifying the time zone in the database connection string. The error occurred due to the absence and, as a result, incorrect definition of time zones. The date in the table was stored without specifying the time zone and postgres assigned the UTC value by default. When querying the database, time zones were also not specified and the system set the local one. Because of this, the data was not displayed on the client, since the date columns were identified by the beginning of the period, and the data contains values ​​​​for 3 hours ago (Moscow time), that is, the previous day"}}:::child
-            softorium_graph_2024_01_5 --> softorium_graph_2024_01_6{{"Wrote a script to save rtsp stream into 1h video files"}}:::child
-            softorium_graph_2024_01_6 --> softorium_graph_2024_01_7{{"Transferring photos via API and writing them to a media storage"}}:::child
-            softorium_graph_2024_01_7 --> softorium_graph_2024_01_8{{"Updating production server from dev, fixing database errors related to changes that appeared without migrations"}}:::child
-            softorium_graph_2024_01_8 --> softorium_graph_2024_01_9{{"Resolving errors when applying migrations, including changing ORM code to SQL to preserve historical integrity. The ORM used the current model definition that contained fields that were created long after the creation of this migration and caused an error when fetching"}}:::child
-            softorium_graph_2024_01_9 --> softorium_graph_2024_01_10{{"linux. Process management (getting PID, reading stdout and sterr from source). Output redirection (piping)"}}:::child
-            softorium_graph_2024_01_10 --> softorium_graph_2024_01_11{{"Filtering data on the client to reduce the load from the server. There was little data and the client loaded everything at once and the filters on the page did not access the server, but this storage"}}:::child
-            softorium_graph_2024_01_11 --> softorium_graph_2024_01_12{{"Interface for editing data (correcting item status). Each user action was saved and could be undone. 'Command' pattern. Confirmation dialog box with display of changes"}}:::child
+            softorium_graph_2024_01_5 --> softorium_graph_2024_01_6{{"Transferring photos via API and writing them to a media storage"}}:::child
+            softorium_graph_2024_01_6 --> softorium_graph_2024_01_7{{"Updating production server from dev, fixing database errors related to changes that appeared without migrations"}}:::child
+            softorium_graph_2024_01_7 --> softorium_graph_2024_01_8{{"Resolving errors when applying migrations, including changing ORM code to SQL to preserve historical integrity. The ORM used the current model definition that contained fields that were created long after the creation of this migration and caused an error when fetching"}}:::child
+            softorium_graph_2024_01_8 --> softorium_graph_2024_01_9{{"Filtering data on the client to reduce the load from the server. There was little data and the client loaded everything at once and the filters on the page did not access the server, but this storage"}}:::child
+            softorium_graph_2024_01_9 --> softorium_graph_2024_01_10{{"Interface for editing data (correcting item status). Each user action was saved and could be undone. 'Command' pattern. Confirmation dialog box with display of changes"}}:::child
         end
 
         subgraph softorium_graph_2024_02
@@ -264,9 +276,7 @@ flowchart TD
             softorium_graph_2024_02_3 --> softorium_graph_2024_02_4{{"Improving the quality of the database, not bypassing anomalies (the 'fail fast' method). Statuses within one network were duplicated among different stores, although this should not have happened. The customer suggested bypassing this in the report by taking the first status instead of adding additional checks to database"}}:::child
             softorium_graph_2024_02_4 --> softorium_graph_2024_02_5{{"Filtering item groups if any of the records contains a status value `HAVING + sum(case when status in () then 1 else 0)`"}}:::child
             softorium_graph_2024_02_5 --> softorium_graph_2024_02_6{{"Created a migration that corrected an anomaly in the data. When filling in the statuses in the sales table, many records were created that belong to the same network and client, but have different statuses for the same date"}}:::child
-            softorium_graph_2024_02_6 --> softorium_graph_2024_02_7{{"Registering the program as a `systemd` service for autostart at system startup and creating a `bash install` script for automatic configuration"}}:::child
-            softorium_graph_2024_02_7 --> softorium_graph_2024_02_8{{"Creating a docker image of a program to simplify its launch (+ support for auto-restarting the program when changing configs)"}}:::child
-            softorium_graph_2024_02_8 --> softorium_graph_2024_02_9{{"Improvement of Dash.Datatable component to enable disabling sorting for specific columns"}}:::child
+            softorium_graph_2024_02_6 --> softorium_graph_2024_02_7{{"Improvement of Dash.Datatable component to enable disabling sorting for specific columns"}}:::child
         end
 
         subgraph softorium_graph_2024_03
@@ -352,7 +362,7 @@ flowchart TD
             softorium_graph_2024_09_3 --> softorium_graph_2024_09_4{{"Creating plotly reports - pie charts, histograms, revenue dynamics, shelf share by suppliers"}}:::child
             softorium_graph_2024_09_4 --> softorium_graph_2024_09_5{{"Concealed the company's client data to create a service show case"}}:::child
         end
-        
+
 
         subgraph softorium_graph_2024_10
             style softorium_graph_2024_10 fill:#F5D7E3, stroke:#D2D0BA, color:#ffffff, font-size:8pt
