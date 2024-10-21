@@ -4,7 +4,7 @@
 
 ## about me
 
-[Short CV here](https://drive.google.com/file/d/1uLDzea3lqNvleykk8VX-VC3cBDDupUKY/view)
+[Short CV here](./assets/CV.pdf)
 
 TODO: write my story
 
