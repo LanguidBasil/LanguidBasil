@@ -4,8 +4,6 @@
 
 ## about me
 
-[Short CV here](./assets/CV.pdf)
-
 TODO: write my story
 
 ## technologies
