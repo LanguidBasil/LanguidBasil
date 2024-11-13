@@ -1,6 +1,6 @@
 # Hi there ✨ I'm ...
 
-![ascii art](./assets/ascii.gif)
+![ascii art](./assets/title.gif)
 
 ## about me
 
